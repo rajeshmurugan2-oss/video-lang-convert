@@ -18,19 +18,19 @@ export default function VideoUpload({ onFileSelect, disabled = false }: VideoUpl
     'video/webm', 'video/mkv', 'video/3gp', 'video/quicktime'
   ]
 
-  const validateFile = (file: File): string | null => {
-    if (!acceptedTypes.includes(file.type)) {
-      return 'Please select a valid video file (MP4, AVI, MOV, WMV, FLV, WebM, MKV, 3GP)'
-    }
-    
-    if (file.size > 100 * 1024 * 1024) { // 100MB limit
-      return 'File size must be less than 100MB'
-    }
-    
-    return null
-  }
-
   const handleFileSelect = useCallback((file: File) => {
+    const validateFile = (file: File): string | null => {
+      if (!acceptedTypes.includes(file.type)) {
+        return 'Please select a valid video file (MP4, AVI, MOV, WMV, FLV, WebM, MKV, 3GP)'
+      }
+      
+      if (file.size > 100 * 1024 * 1024) { // 100MB limit
+        return 'File size must be less than 100MB'
+      }
+      
+      return null
+    }
+
     const validationError = validateFile(file)
     if (validationError) {
       setError(validationError)

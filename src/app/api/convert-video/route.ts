@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
+import OpenAI from 'openai'
 
 // Function to analyze segments and identify potential speaker changes
-function analyzeSpeakerSegments(segments: any[]) {
-  const speakerSegments = []
+function analyzeSpeakerSegments(segments: Array<{text?: string, start: number, end: number}>) {
+  const speakerSegments: Array<{speaker: string, text: string, startTime: number, endTime: number, duration: number}> = []
   let currentSpeaker = 'Speaker 1'
   let currentText = ''
   let startTime = 0
@@ -83,10 +84,10 @@ const debugInfo = {
 }
 
 // Initialize OpenAI only if API key exists
-let openai: any = null
+let openai: OpenAI | null = null
 try {
   if (apiKey) {
-    const OpenAI = require('openai').default
+    // OpenAI is already imported at the top
     openai = new OpenAI({
       apiKey: apiKey,
     })

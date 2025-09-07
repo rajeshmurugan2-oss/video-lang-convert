@@ -408,7 +408,7 @@ Each file contains the translated speech for that specific speaker segment.
                     <li>Copy the YouTube URL above</li>
                     <li>Use a YouTube downloader (yt-dlp, 4K Video Downloader, or online converters)</li>
                     <li>Download the video as MP4, AVI, or other supported format</li>
-                    <li>Switch to "📁 Upload File" tab and upload the downloaded video</li>
+                    <li>Switch to &quot;📁 Upload File&quot; tab and upload the downloaded video</li>
                     <li>Select target language and convert</li>
                   </ol>
                   <p className="text-xs text-blue-700 mt-2">

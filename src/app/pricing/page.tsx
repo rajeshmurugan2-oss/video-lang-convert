@@ -1,7 +1,7 @@
 'use client'
 
 import { SignedIn, SignedOut, RedirectToSignIn } from '@clerk/nextjs'
-import { CheckCircle, Star, ArrowRight } from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react'
 import { useState } from 'react'
 import { toast } from 'sonner'
 
@@ -19,7 +19,7 @@ export default function PricingPage() {
       await new Promise(resolve => setTimeout(resolve, 2000))
       
       toast.success('Subscription activated! You can now use all premium features.')
-    } catch (error) {
+    } catch {
       toast.error('Failed to process subscription. Please try again.')
     } finally {
       setLoading(null)
@@ -231,7 +231,7 @@ export default function PricingPage() {
                     What is the $1 authorization charge?
                   </h3>
                   <p className="text-gray-600">
-                    We charge $1 to verify your payment method. This is a temporary authorization that will be refunded within 1-3 business days. It's not an additional fee.
+                    We charge $1 to verify your payment method. This is a temporary authorization that will be refunded within 1-3 business days. It&apos;s not an additional fee.
                   </p>
                 </div>
                 
@@ -240,16 +240,16 @@ export default function PricingPage() {
                     Can I cancel anytime?
                   </h3>
                   <p className="text-gray-600">
-                    Yes! You can cancel your subscription anytime from your dashboard. You'll continue to have access to premium features until the end of your billing period.
+                    Yes! You can cancel your subscription anytime from your dashboard. You&apos;ll continue to have access to premium features until the end of your billing period.
                   </p>
                 </div>
                 
                 <div className="bg-white rounded-lg p-6 shadow-sm">
                   <h3 className="font-semibold text-gray-900 mb-2">
-                    What's your refund policy?
+                    What&apos;s your refund policy?
                   </h3>
                   <p className="text-gray-600">
-                    We offer a 30-day money-back guarantee. If you're not satisfied with our service, contact us within 30 days for a full refund, no questions asked.
+                    We offer a 30-day money-back guarantee. If you&apos;re not satisfied with our service, contact us within 30 days for a full refund, no questions asked.
                   </p>
                 </div>
                 

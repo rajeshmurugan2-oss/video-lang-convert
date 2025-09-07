@@ -271,7 +271,7 @@ export default function LandingPage() {
           
           <div className="text-center mt-12">
             <p className="text-gray-600">
-              <strong>30-day money-back guarantee</strong> - If you're not satisfied, we'll refund your payment.
+              <strong>30-day money-back guarantee</strong> - If you&apos;re not satisfied, we&apos;ll refund your payment.
             </p>
           </div>
         </div>
@@ -294,7 +294,7 @@ export default function LandingPage() {
                 ))}
               </div>
               <p className="text-gray-600 mb-4">
-                "VideoLang Pro saved me hours of work. The multi-speaker detection is incredible!"
+                &quot;VideoLang Pro saved me hours of work. The multi-speaker detection is incredible!&quot;
               </p>
               <div className="font-semibold text-gray-900">Sarah Chen</div>
               <div className="text-sm text-gray-500">YouTube Creator</div>
@@ -307,7 +307,7 @@ export default function LandingPage() {
                 ))}
               </div>
               <p className="text-gray-600 mb-4">
-                "Perfect for my multilingual content strategy. The voice quality is amazing!"
+                &quot;Perfect for my multilingual content strategy. The voice quality is amazing!&quot;
               </p>
               <div className="font-semibold text-gray-900">Marco Rodriguez</div>
               <div className="text-sm text-gray-500">Content Marketer</div>
@@ -320,7 +320,7 @@ export default function LandingPage() {
                 ))}
               </div>
               <p className="text-gray-600 mb-4">
-                "The ZIP download feature makes it so easy to organize my audio files."
+                &quot;The ZIP download feature makes it so easy to organize my audio files.&quot;
               </p>
               <div className="font-semibold text-gray-900">Alex Thompson</div>
               <div className="text-sm text-gray-500">Video Editor</div>
