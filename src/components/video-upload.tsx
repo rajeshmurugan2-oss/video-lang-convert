@@ -13,12 +13,12 @@ export default function VideoUpload({ onFileSelect, disabled = false }: VideoUpl
   const [error, setError] = useState<string | null>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
-  const acceptedTypes = [
-    'video/mp4', 'video/avi', 'video/mov', 'video/wmv', 'video/flv', 
-    'video/webm', 'video/mkv', 'video/3gp', 'video/quicktime'
-  ]
-
   const handleFileSelect = useCallback((file: File) => {
+    const acceptedTypes = [
+      'video/mp4', 'video/avi', 'video/mov', 'video/wmv', 'video/flv', 
+      'video/webm', 'video/mkv', 'video/3gp', 'video/quicktime'
+    ]
+
     const validateFile = (file: File): string | null => {
       if (!acceptedTypes.includes(file.type)) {
         return 'Please select a valid video file (MP4, AVI, MOV, WMV, FLV, WebM, MKV, 3GP)'
@@ -40,7 +40,7 @@ export default function VideoUpload({ onFileSelect, disabled = false }: VideoUpl
     setError(null)
     setSelectedFile(file)
     onFileSelect(file)
-  }, [onFileSelect, acceptedTypes])
+  }, [onFileSelect])
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
     e.preventDefault()
