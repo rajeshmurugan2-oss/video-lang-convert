@@ -40,7 +40,7 @@ export default function VideoUpload({ onFileSelect, disabled = false }: VideoUpl
     setError(null)
     setSelectedFile(file)
     onFileSelect(file)
-  }, [onFileSelect])
+  }, [onFileSelect, acceptedTypes])
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
     e.preventDefault()

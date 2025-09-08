@@ -1,7 +1,6 @@
 'use client'
 
-import { SignedIn, SignedOut, RedirectToSignIn } from '@clerk/nextjs'
-import { UserButton } from '@clerk/nextjs'
+import { SignedIn, SignedOut, RedirectToSignIn, UserButton } from '@clerk/nextjs'
 import VideoLanguageInterface from '@/components/video-language-interface'
 
 export default function Dashboard() {
